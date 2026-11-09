@@ -6,7 +6,7 @@
 人工审核、纠正与遗忘、来源追溯和可验证写入。它连接用户已有的 Memory HTTPS
 服务，不包含、启动或出售云端 Memory 后端，也不创建第二套数据库或 MCP 服务。
 
-当前版本：`0.2.1`
+当前版本：`0.2.2`
 
 ## 功能
 
@@ -34,7 +34,7 @@
 
 需要 Obsidian `1.11.4` 或更高版本。Windows、macOS 与 Android 使用同一组插件文件。
 
-1. 从 Releases 下载 `azhen-memory-0.2.1.zip`。
+1. 从 Releases 下载 `azhen-memory-0.2.2.zip`。
 2. 解压出 `main.js`、`manifest.json` 和 `styles.css`。
 3. 放入 Obsidian 仓库目录：
 
@@ -56,6 +56,9 @@
 
 不要删除 `data.json`。Android 与 Windows 更新时只替换前三个文件，现有设置和
 SecretStorage 中的 Token 保持不变。
+
+0.2.2 仅收紧 Android 手机条件样式。桌面端样式、插件 ID、Memory 协议、
+Assistant ID 绑定、Bearer Token 保存方式和云端数据均未改变。
 
 ## 配置
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.2 - 2026-11-09
+
+- 优化 Obsidian Android 端的 Memory 信息密度。
+- 收紧标题、正文、行高、卡片间距和 Markdown 分类缩进。
+- 保持分类折叠、来源、历史、候选审核和全部 Memory 写入流程不变。
+- 桌面端样式、插件 ID `azhen-memory` 和现有配置保持兼容。
+
 ## 0.2.1 - 2026-11-09
 
 - 发布阿斟 Memory 的首个统一 GitHub Release 构建。

@@ -1,7 +1,7 @@
 {
   "id": "azhen-memory",
   "name": "阿斟 Memory",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "minAppVersion": "1.11.4",
   "description": "连接阿斟现有 Memory HTTPS 接口，按原文分类管理记忆、候选、历史和来源。",
   "author": "Azhen",

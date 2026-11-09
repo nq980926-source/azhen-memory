@@ -434,3 +434,171 @@
   font-family: var(--font-text);
   font-size: var(--font-text-size);
 }
+
+/* Obsidian Mobile: denser reading without removing Markdown categories,
+   collapse behavior, source evidence, or touch-sized actions. */
+body.is-phone .azhen-memory-view {
+  padding: 12px 12px calc(14px + env(safe-area-inset-bottom, 0px));
+  line-height: 1.45;
+}
+
+body.is-phone .azhen-memory-view__header {
+  margin-bottom: 12px;
+}
+
+body.is-phone .azhen-memory-view__title {
+  margin-bottom: 3px;
+  font-size: var(--font-ui-large);
+  line-height: 1.2;
+}
+
+body.is-phone .azhen-memory-view__subtitle {
+  font-size: var(--font-ui-smaller);
+  line-height: 1.35;
+}
+
+body.is-phone .azhen-memory-toolbar {
+  gap: 6px;
+  margin-top: 8px;
+}
+
+body.is-phone .azhen-memory-status,
+body.is-phone .azhen-memory-pending-operation,
+body.is-phone .azhen-memory-feedback {
+  padding: 11px 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+body.is-phone .azhen-memory-status__label {
+  margin-bottom: 5px;
+}
+
+body.is-phone .azhen-memory-status__meta {
+  margin-top: 6px;
+}
+
+body.is-phone .azhen-memory-actions,
+body.is-phone .azhen-memory-fact__actions {
+  gap: 6px;
+}
+
+body.is-phone .azhen-memory-actions button {
+  min-height: 40px;
+}
+
+body.is-phone .azhen-memory-summary-grid {
+  gap: 7px;
+  margin: 11px 0;
+}
+
+body.is-phone .azhen-memory-summary-card {
+  padding: 9px 10px;
+}
+
+body.is-phone .azhen-memory-summary-card__value {
+  font-size: var(--font-ui-medium);
+}
+
+body.is-phone .azhen-memory-section {
+  padding: 10px;
+  margin: 11px 0;
+  border-radius: 10px;
+}
+
+body.is-phone .azhen-memory-document {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+body.is-phone .azhen-memory-card {
+  padding: 10px;
+  margin-top: 8px;
+}
+
+body.is-phone .azhen-memory-card__heading {
+  align-items: flex-start;
+  gap: 6px;
+}
+
+body.is-phone .azhen-memory-card__heading h4,
+body.is-phone .azhen-memory-collapse__summary h3 {
+  min-width: 0;
+  font-size: var(--font-ui-small);
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+body.is-phone .azhen-memory-collapse > summary {
+  min-height: 38px;
+  padding: 3px 0;
+}
+
+body.is-phone .azhen-memory-collapse__summary {
+  gap: 5px;
+  line-height: 1.35;
+}
+
+body.is-phone .azhen-memory-collapse__body {
+  margin-top: 8px;
+}
+
+body.is-phone .azhen-memory-category {
+  margin-top: 6px;
+  margin-left: min(calc(var(--azhen-memory-depth) * 7px), 21px);
+  padding: 7px 8px;
+  border-radius: 8px;
+}
+
+body.is-phone .azhen-memory-category__title {
+  flex: 1 1 12em;
+  line-height: 1.35;
+}
+
+body.is-phone .azhen-memory-entry {
+  padding: 7px 8px;
+}
+
+body.is-phone .azhen-memory-entry__preview,
+body.is-phone .azhen-memory-entry__source,
+body.is-phone .azhen-memory-document__body,
+body.is-phone .azhen-memory-fact__text,
+body.is-phone .azhen-memory-modal__description {
+  font-size: max(13px, calc(var(--font-text-size) - 1px));
+  line-height: 1.45;
+}
+
+body.is-phone .azhen-memory-entry__source,
+body.is-phone .azhen-memory-content-block pre {
+  padding: 7px 8px;
+  border-radius: 7px;
+}
+
+body.is-phone .azhen-memory-document__body {
+  max-height: 48vh;
+  margin-top: 8px;
+  padding: 8px 9px;
+  border-radius: 7px;
+  font-size: max(13px, calc(var(--font-text-size) - 1px));
+  line-height: 1.45;
+}
+
+body.is-phone .azhen-memory-source {
+  margin-top: 8px;
+  padding: 8px 9px;
+}
+
+body.is-phone .azhen-memory-source__row {
+  margin-top: 3px;
+  line-height: 1.4;
+}
+
+body.is-phone .azhen-memory-history {
+  margin-top: 7px;
+  padding: 8px 9px;
+}
+
+body.is-phone .azhen-memory-security-note {
+  margin-top: 12px;
+  line-height: 1.4;
+}
