@@ -1,0 +1,21 @@
+{
+  "name": "azhen-memory",
+  "version": "0.2.1",
+  "private": true,
+  "description": "Azhen Memory Obsidian plugin - safe Memory management and history",
+  "license": "MIT",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "build": "npm run typecheck && node esbuild.config.mjs production && npm test && node scripts/verify-mobile.mjs && node scripts/smoke-load.mjs",
+    "dev": "node esbuild.config.mjs",
+    "test": "node --experimental-transform-types --test test/*.test.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "esbuild": "^0.25.0",
+    "obsidian": "^1.14.4",
+    "typescript": "^5.9.0"
+  }
+}
