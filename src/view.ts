@@ -12,6 +12,7 @@ import type {
   MemoryTarget,
 } from "./memory/contract.ts";
 import type { PendingMemoryOperation } from "./memory/pending-operation.ts";
+import { groupAutomaticDateSections } from "./memory/date-groups.ts";
 import { safeOriginLabel } from "./security/url-policy.ts";
 import {
   SessionFoldState,
@@ -332,19 +333,19 @@ export class AzhenMemoryView extends ItemView {
   ): void {
     const sectionCount = documents.reduce(
       (total, document) =>
-        total + parseMemoryDocument(document).sections.length,
+        total + groupAutomaticDateSections(parseMemoryDocument(document).sections).length,
       0,
     );
     const section = this.createTopLevelSection(
       container,
       "current",
       "当前有效记忆",
-      `${documents.length} 个文档 · ${sectionCount} 个原文分类`,
+      `${documents.length} 个文档 · ${sectionCount} 个展示分组`,
     );
     section.createDiv({
       cls: "setting-item-description",
       text:
-        "分类直接取自已返回的 Markdown 标题。标题层级只通过缩进和折叠展示，不改写、合并或重命名原文。",
+        "分类取自 Markdown 标题；同一分类层级内，同日期的自动整理合并展示，保留全部条目。其他标题保持原样，云端原文不变。",
     });
     for (const document of documents) {
       const documentEl = section.createDiv({
@@ -376,7 +377,7 @@ export class AzhenMemoryView extends ItemView {
       parsed.roots.length > 0
         ? Math.min(...parsed.roots.map((section) => section.level))
         : 1;
-    for (const memorySection of parsed.sections) {
+    for (const memorySection of groupAutomaticDateSections(parsed.sections)) {
       this.renderMarkdownSection(
         container,
         document,

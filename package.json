@@ -1,6 +1,6 @@
 {
   "name": "azhen-memory",
-  "version": "0.2.2",
+  "version": "0.2.3-date-ui-test.1",
   "private": true,
   "description": "Azhen Memory Obsidian plugin - safe Memory management and history",
   "license": "MIT",
